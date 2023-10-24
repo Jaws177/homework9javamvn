@@ -16,7 +16,7 @@ public class RadioTest {
             "100, 100"
     })
     public void increaseVolumeTest(int expected, int currentVolume) {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         currentVolume = radio.setCurrentVolume(currentVolume);
         int actual = radio.increaseVolume();
 
@@ -33,7 +33,7 @@ public class RadioTest {
             "99, 100"
     })
     public void decreaseVolumeTest(int expected, int currentVolume) {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         currentVolume = radio.setCurrentVolume(currentVolume);
         int actual = radio.decreaseVolume();
 
@@ -49,7 +49,7 @@ public class RadioTest {
             "0, 9"
     })
     public void nextRadioStationTest(int expected, int currentRadioStation) {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         currentRadioStation = radio.setCurrentRadioStation(currentRadioStation);
         int actual = radio.nextStation();
 
@@ -65,7 +65,7 @@ public class RadioTest {
             "9, 0"
     })
     public void prevRadioStationTest(int expected, int currentRadioStation) {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         currentRadioStation = radio.setCurrentRadioStation(currentRadioStation);
         int actual = radio.prevStation();
 
